@@ -139,8 +139,8 @@ function draw(){
    }
   }
 }
-let eyeX = map(mouseX, 0, width, 150, 250);
-let eyeY = map(mouseY, 0, height, 150, 250)
+let eyeX = constrain(mouseX, 150, 250);
+let eyeY = constrain(mouseY, 150, 250)
     function drawface(face_clr=255,eye_clr=0,size=1){   //255與0為預設的值
   push()
   scale(size)
@@ -158,8 +158,8 @@ let eyeY = map(mouseY, 0, height, 150, 250)
 
   // 眼睛
   fill(0); 
-  ellipse(180, 190, 20, 20); // 左眼
-  ellipse(220, 190, 20, 20); // 右眼
+  ellipse(eyeX-20, eyeY, 20, 20); // 左眼
+  ellipse(eyeX+20, eyeY, 20, 20); // 右眼
 
   // 鼻子
   fill(255,87,34); 
