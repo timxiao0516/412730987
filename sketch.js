@@ -98,9 +98,9 @@ btnvoiceElement.mousePressed(voice_go)
  radioElement.style("color","#000")
  radioElement.style("background","#f3d5")
  
-  //for(var i=0;i<20;i=i+1){
-   // drawface(face_colors[int(random(face_colors.length))] ,eye_colors[int(random(eye_colors.length))],random(0.3,1.2))
-// }
+  for(var i=0;i<20;i=i+1){
+    drawface(face_colors[int(random(face_colors.length))] ,eye_colors[int(random(eye_colors.length))],random(0.3,1.2))
+ }
 }
 function draw(){
    background("#C490D1");
@@ -139,6 +139,8 @@ function draw(){
    }
   }
 }
+let eyeX = map(mouseX, 0, width, 150, 250);
+let eyeY = map(mouseY, 0, height, 150, 250)
     function drawface(face_clr=255,eye_clr=0,size=1){   //255與0為預設的值
   push()
   scale(size)
